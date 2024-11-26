@@ -7,7 +7,7 @@ INPUT_FOLDER=input
 OUTPUT_FOLDER=output
 SERVER_USER=root
 SERVER_HOST=93.183.81.30
-SERVER_PATH=/home
+SERVER_PATH=/home/grass-airdrop-farm/output
 SSH_PASSWORD=v*n*-i#ZdV?2Ef
 
 run-script:
