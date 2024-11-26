@@ -116,8 +116,8 @@ def remove_proxy_from_list(proxy, file_name):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="WebSocket proxy manager")
-    parser.add_argument("file_name", help="Path to the proxy file")
     parser.add_argument("user_id", help="User ID for WebSocket connections")
+    parser.add_argument("file_name", help="Path to the proxy file")
 
     args = parser.parse_args()
     asyncio.run(main(args.file_name, args.user_id))
