@@ -90,7 +90,7 @@ async def main(file_name, user_id):
     while True:
         done, pending = await asyncio.wait(tasks.keys(), return_when=asyncio.FIRST_COMPLETED)
         for task in done:
-            failed_proxy = tasks.pop(task)  # Удаляем выполненное задание из словаря
+            failed_proxy = tasks.pop(task)
             if task.result() is None:
                 logger.info(f"Removing and replacing failed proxy: {failed_proxy}")
                 active_proxies.remove(failed_proxy)
@@ -98,7 +98,6 @@ async def main(file_name, user_id):
                 active_proxies.append(new_proxy)
                 new_task = asyncio.create_task(connect_to_wss(new_proxy, user_id, file_name))
                 tasks[new_task] = new_proxy
-        # Дополняем задания, если нужно
         for proxy in set(active_proxies) - set(tasks.values()):
             new_task = asyncio.create_task(connect_to_wss(proxy, user_id, file_name))
             tasks[new_task] = proxy

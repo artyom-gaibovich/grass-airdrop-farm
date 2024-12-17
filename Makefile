@@ -4,7 +4,7 @@ read:
 INPUT_FOLDER=input
 OUTPUT_FOLDER=output
 SERVER_USER=root
-SERVER_HOST=
+SERVER_HOST=89.223.122.215
 SERVER_PATH=/home/grass-airdrop-farm/output
 SSH_PASSWORD=
 
@@ -36,7 +36,31 @@ proxy:
 	python new_read.py
 
 run:
-	  python main.py [grass_user_id] output/output_1.txt & \
-	  python main.py [grass_user_id] output/output_2.txt & \
-	  python main.py [grass_user_id] output/output_N.txt & \
+	  python main.py 2pBIJW72ZEYmUyTSjQkZV2bR6LD output/output_1.txt & \
+	  python main.py 2pAI2Q6KBRt5K6tZ61qdaKyGgFm output/output_2.txt & \
 	  wait
+
+
+
+//run:
+	  python main.py 2p9mtXal4k5Q5Vav1lU2pvoEhup output/output_1.txt
+	python main.py 2pAIMZjHFiGpdtaOYvsEr5ZTzDu output/output_2.txt
+	  python main.py 2p9nbc2RB7rbOBu9yACR1D84FZ1 output/output_3.txt
+	  python main.py 2pAIAxqG0ZRV4e7A9SZBJxPaapV output/output_4.txt
+	  python main.py 2p9nEB5xhXbYrCdobE7cWfydfq1 output/output_5.txt
+
+	  python main.py 2pAIS1wQLkHccgdR22s07UKfS0J output/output_6.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
